@@ -25,7 +25,7 @@ SECRET_KEY = '^sxqtc67n7)j#h39pdwe78_ti1%*jgasx%2_bb-#=0olxvgo)$'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -119,3 +119,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.2/howto/static-files/
 
 STATIC_URL = '/static/'
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+import  dj_database_url
+db_from_env = dj_database_url.config()
+DATABASES['default'].update(db_from_env)

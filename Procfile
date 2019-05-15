@@ -1,1 +1,1 @@
-web: gunicorn WeatherApp.wsgi --lof-file=-
+web: gunicorn WeatherApp.wsgi --log-file=-
